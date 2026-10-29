@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tachnen"
+version = "0.1.0"
+description = "Tách nền ảnh offline, miễn phí: PNG trong suốt, nền mới và ảnh so sánh trước/sau."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Viet Phan" }]
+requires-python = ">=3.10"
+dependencies = [
+    "rembg[cpu]>=2.0.50",
+    "Pillow>=10.0",
+    "flask>=3.0",
+]
+
+[project.scripts]
+tachnen = "tachnen.cli:main"
+
+[tool.setuptools]
+packages = ["tachnen"]
